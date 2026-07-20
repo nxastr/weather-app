@@ -37,7 +37,9 @@ index.html      # Main page
 log-in.html     # Login page 
 sign-in.html    # Registration page 
 
-```  ## Installation
+```  
+
+## Installation
 
 Clone the repository:
 
