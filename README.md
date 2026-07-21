@@ -2,13 +2,13 @@
 
 ![Weather App](assets/screenshot.png)
 
-A responsive weather application interface built with HTML, SCSS, JavaScript and Bootstrap.
+A responsive weather application that displays current weather data using the Open-Meteo API.
 
 ## About the project
 
 This project was developed as a team university assignment.My responsibility was designing and implementing the frontend interface, including the responsive layout, navigation, weather cards, and authentication pages.
 
-Current version focuses on the user interface and responsive design. Weather API integration is planned as a future improvement.
+After completing the original project, I independently extended the application by integrating the Open-Meteo API. The application now displays current weather data for selected cities and allows users to search for weather conditions in a chosen location.
 
 ## Features
 
@@ -18,7 +18,12 @@ Current version focuses on the user interface and responsive design. Weather API
 - Mobile-friendly navigation
 - Responsive weather cards
 - Responsive clock component
-- Modern user interface 
+- Modern user interface
+- Current weather data from the Open-Meteo API
+- City weather search
+- Five predefined weather cards
+- Dynamic temperature, weather description, and icon updates
+- Loading and error messages
 
 ## Technologies
 
@@ -26,6 +31,8 @@ Current version focuses on the user interface and responsive design. Weather API
 - SCSS
 - JavaScript
 - Bootstrap 5
+- OpenMeteoAPI
+- Fetch API
 
 ## Project structure
 
@@ -57,15 +64,14 @@ Run the application by opening `index.html` in your browser.
 
 ## Future improvements
 
-- Integrate a weather API
-- Add city search functionality
-- Display real-time weather data
 - Add a multi-day weather forecast
+- Allow users to customize predefined cities
+- Save selected cities in local storage
 - Improve accessibility
-- Optimize performance  
+- Containerize the application with Docker
+- Optimize performance
+- Add a CI/CD pipeline with GitHub Actions
 
 ## Author
 
 **Zuzanna Chmielewska**  
-
-Frontend development and responsive interface implementation.
