@@ -172,6 +172,21 @@ main > .container > .row {
   flex: 0 0 auto;
 }
 
+.weather-msg {
+  text-align: center;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: calc(100% - 40px);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.701);
+}
+
+.weather-msg:empty {
+  display: none;
+}
+
 footer {
   margin-top: auto;
   padding: 20px 0 clamp(30px, 8vh, 100px);
@@ -181,6 +196,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0 clamp(10px, 3vw, 30px);
   border-radius: 25px;
@@ -238,5 +254,4 @@ footer {
   main > .container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

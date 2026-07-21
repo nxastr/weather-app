@@ -195,6 +195,20 @@ main {
     }
 }
 
+.weather-msg {
+    text-align: center;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    width: fit-content;
+    max-width: calc(100% - 40px);
+    border-radius: 10px;
+    background-color: $bgc;
+}
+
+.weather-msg:empty {
+    display: none;
+}
+
 /////////////////// footer ///////////////////
 
 footer {
