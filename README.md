@@ -39,6 +39,7 @@ I also containerized the application using Docker and configured Nginx to serve 
 - Fetch API
 - Docker
 - Nginx
+- Github Actions
 
 ## Project structure
 
@@ -101,6 +102,9 @@ Remove the container:
 ```bash
 docker rm weather-app-container
 ```
+## CI
+
+The project uses GitHub Actions to automatically validate the Docker image build after every push and pull request to the `main` branch.
 
 ## Security
 
@@ -120,9 +124,8 @@ The application is served through a custom Nginx configuration with basic securi
 - Allow users to customize predefined cities
 - Save selected cities in local storage
 - Improve accessibility
-- Containerize the application with Docker
 - Optimize performance
-- Add a CI/CD pipeline with GitHub Actions
+- Add automated tests to the CI workflow
 
 ## Author
 
