@@ -28,7 +28,7 @@ jobs:
       - name: Test Application response
         run: |
           sleep 2
-          url --fail http://localhost:8080
+          curl --fail http://localhost:8080
 
       - name: Stop Docker Container
         if: always()
