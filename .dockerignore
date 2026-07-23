@@ -1,0 +1,10 @@
+.git
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+assets/
+.vscode/
+.DS_Store
+*.scss
+*.css.map
