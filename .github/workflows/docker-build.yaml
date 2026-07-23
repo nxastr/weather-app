@@ -1,4 +1,4 @@
-name: Docker Build
+name: Docker Build and Test
 
 on:
   push:
@@ -18,3 +18,18 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t weather-app .
+
+      - name: Run Docker container
+        run: docker run --name weather-app-test -p 8080:80 -d weather-app
+
+      - name: Test Nginx configuration
+        run: docker exec weather-app-test nginx -t
+
+      - name: Test Application response
+        run: |
+          sleep 2
+          url --fail http://localhost:8080
+
+      - name: Stop Docker Container
+        if: always()
+        run: docker rm -f weather-app-test
