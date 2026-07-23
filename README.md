@@ -2,13 +2,15 @@
 
 ![Weather App](assets/screenshot.png)
 
-A responsive weather application that displays current weather data using the Open-Meteo API.
+A responsive weather application that displays current weather data using the Open-Meteo API and is containerized with Docker and served through Nginx.
 
 ## About the project
 
-This project was developed as a team university assignment.My responsibility was designing and implementing the frontend interface, including the responsive layout, navigation, weather cards, and authentication pages.
+This project was developed as a team university assignment. My responsibility was designing and implementing the frontend interface, including the responsive layout, navigation, weather cards, and authentication pages.
 
-After completing the original project, I independently extended the application by integrating the Open-Meteo API. The application now displays current weather data for selected cities and allows users to search for weather conditions in a chosen location.
+After completing the original project, I independently extended the application by integrating the Open-Meteo API. The application now displays current weather data for predefined cities and allows users to search for weather conditions in a chosen location.
+
+I also containerized the application using Docker and configured Nginx to serve the static files with basic security hardening, including security headers, restricted HTTP methods, and disabled version disclosure.
 
 ## Features
 
@@ -24,6 +26,8 @@ After completing the original project, I independently extended the application 
 - Five predefined weather cards
 - Dynamic temperature, weather description, and icon updates
 - Loading and error messages
+- Containerized deployment with Docker and Nginx
+- Basic Nginx security hardening
 
 ## Technologies
 
@@ -33,6 +37,8 @@ After completing the original project, I independently extended the application 
 - Bootstrap 5
 - OpenMeteoAPI
 - Fetch API
+- Docker
+- Nginx
 
 ## Project structure
 
@@ -50,17 +56,63 @@ sign-in.html    # Registration page
 
 Clone the repository:
 
-```bash 
-git clone https://github.com/nxastr/weather-app.git 
+```bash
+git clone https://github.com/nxastr/weather-app.git
 ```
 
 Open the project folder:
 
-```bash 
+```bash
 cd weather-app
 ```
 
-Run the application by opening `index.html` in your browser.
+For local frontend development, run the application using a local server such as Live Server.
+
+## Docker
+
+Make sure Docker Desktop is running.
+
+Build the Docker image:
+
+```bash
+docker build -t weather-app .
+```
+
+Run the container:
+
+```bash
+docker run --name weather-app-container -p 8080:80 -d weather-app
+```
+
+Open the application in your browser:
+
+```text
+http://localhost:8080
+```
+
+Stop the container:
+
+```bash
+docker stop weather-app-container
+```
+
+Remove the container:
+
+```bash
+docker rm weather-app-container
+```
+
+## Security
+
+The application is served through a custom Nginx configuration with basic security hardening, including:
+
+- Content Security Policy
+- Protection against clickjacking
+- MIME sniffing protection
+- Referrer Policy
+- Permissions Policy
+- Disabled Nginx version disclosure
+- Restricted HTTP methods
 
 ## Future improvements
 

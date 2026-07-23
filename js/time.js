@@ -35,4 +35,5 @@ if (seconds < 10) {
 }
     
 // call the `updateDateTime` function every second
+updateDateTime();
 setInterval(updateDateTime, 1000);
