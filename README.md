@@ -14,20 +14,15 @@ I also containerized the application using Docker and configured Nginx to serve 
 
 ## Features
 
-- Responsive layout
-- Weather dashboard interface
-- Login and sign-up pages
-- Mobile-friendly navigation
-- Responsive weather cards
-- Responsive clock component
-- Modern user interface
+- Responsive weather dashboard
 - Current weather data from the Open-Meteo API
-- City weather search
-- Five predefined weather cards
+- City search with loading and error handling
+- Five predefined city cards
 - Dynamic temperature, weather description, and icon updates
-- Loading and error messages
-- Containerized deployment with Docker and Nginx
+- Login and sign-up pages
+- Dockerized deployment with Nginx
 - Basic Nginx security hardening
+- Automated Docker build and application checks with GitHub Actions
 
 ## Technologies
 
@@ -104,11 +99,20 @@ docker rm weather-app-container
 ```
 ## CI
 
-The project uses GitHub Actions to automatically validate the Docker image build after every push and pull request to the `main` branch.
+This project uses GitHub Actions to automatically validate the application after every push and pull request to the `main` branch.
+
+The workflow:
+
+- checks out the repository,
+- builds the Docker image,
+- starts the Docker container,
+- validates the Nginx configuration,
+- verifies that the application returns a successful HTTP response,
+- removes the test container after completion.
 
 ## Security
 
-The application is served through a custom Nginx configuration with basic security hardening, including:
+Application is served through a custom Nginx configuration with basic security hardening, including:
 
 - Content Security Policy
 - Protection against clickjacking
